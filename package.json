@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "start": "rollup -c -w",
-    "build": "rollup"
+    "build": "rollup",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.jsx\" --fix"
   },
   "author": "",
   "license": "ISC",

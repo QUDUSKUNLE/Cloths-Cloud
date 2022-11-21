@@ -9,8 +9,12 @@ export default function ClothsCloud() {
           position: 'absolute',
           left: '50%',
           top: '50%',
-          transform: 'translate(-50%, -50%)'
-        }}>Cloths Cloud</h1>
+          transform: 'translate(-50%, -50%)',
+        }}
+      >
+        Cloths Cloud
+
+      </h1>
     </div>
   );
 }
