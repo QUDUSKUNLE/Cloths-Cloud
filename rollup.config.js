@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
-import postcss from 'rollup-plugin-postcss'
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: 'src/index.jsx',
@@ -14,28 +14,28 @@ export default {
   },
   plugins: [
     commonjs({
-        include: [
-          'node_modules/**',
-        ],
-        exclude: [
-          'node_modules/process-es6/**',
-        ],
+      include: [
+        'node_modules/**',
+      ],
+      exclude: [
+        'node_modules/process-es6/**',
+      ],
     }),
     resolve(),
     babel({
-        exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
     }),
     replace({
-        'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     postcss({
-        autoModules: true
+      autoModules: true,
     }),
     livereload('public'),
     serve({
-        contentBase: 'public',
-        port: 3001,
-        open: true,
+      contentBase: 'public',
+      port: 3001,
+      open: true,
     }), // index.html should be in root of project
-  ]
-}
+  ],
+};

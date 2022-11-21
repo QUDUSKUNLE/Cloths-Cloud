@@ -7,7 +7,7 @@
     "public"
   ],
   "scripts": {
-    "start": "rollup -c -w",
+    "start": "npm install && rollup -c -w",
     "build": "rollup",
     "lint": "eslint \"{src,apps,libs,test}/**/*.jsx\" --fix"
   },
