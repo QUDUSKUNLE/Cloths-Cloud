@@ -7,8 +7,8 @@
     "public"
   ],
   "scripts": {
-    "start": "rollup -c -w",
-    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "build": "rollup -c -w",
+    "start": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
     "lint": "eslint \"{src,apps,libs,test}/**/*.jsx\" --fix"
   },
   "author": "",
